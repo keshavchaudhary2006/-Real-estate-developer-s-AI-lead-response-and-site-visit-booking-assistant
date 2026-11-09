@@ -1,0 +1,20 @@
+
+services:
+  # Express.js Backend
+  - type: web
+    name: keshav-backend
+    runtime: node
+    plan: free
+    region: singapore
+
+    buildCommand: npm install
+    startCommand: npm run server
+
+    healthCheckPath: /api/health
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+      - key: DATABASE_URL
+        sync: false

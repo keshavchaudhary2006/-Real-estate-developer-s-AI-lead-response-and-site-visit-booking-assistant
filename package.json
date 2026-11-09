@@ -1,0 +1,39 @@
+{
+  "name": "keshav",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Keshav - Real Estate Developer's AI Lead Response and Site Visit Booking Assistant",
+  "scripts": {
+    "dev": "node ./node_modules/next/dist/bin/next dev",
+    "build": "node ./node_modules/next/dist/bin/next build",
+    "start": "node ./node_modules/next/dist/bin/next start",
+    "server": "node server/index.js",
+    "migrate": "node scripts/migrate.js",
+    "seed": "node scripts/seed.js",
+    "cron": "node -e \"require('./server/jobs/reminderCron').checkAndDispatchReminders().then(console.log)\"",
+    "test": "node scripts/test-api.js && node scripts/test-express-routes.js && node scripts/test-chat.js && node scripts/test-agent-guardrails.js && node scripts/test-scheduling-cron.js && node scripts/test-inbox.js && node scripts/test-analytics.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "lucide-react": "^0.460.0",
+    "next": "^14.2.18",
+    "pg": "^8.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3"
+  }
+}
